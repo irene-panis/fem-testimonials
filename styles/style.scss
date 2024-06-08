@@ -1,0 +1,37 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 4;
+  grid-template-rows: 2;
+}
+
+.daniel {
+  grid-column: 1 / span 2;
+}
+
+.jonathan {
+  grid-column: 3;
+}
+
+.kira {
+  grid-column: 4;
+  grid-row: 1 / span 2;
+}
+
+.jeanette {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.patrick {
+  grid-column: 2 / span 2;
+  grid-row: 2;
+}
