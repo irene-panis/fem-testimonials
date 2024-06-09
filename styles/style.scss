@@ -14,6 +14,9 @@ body {
   display: flex;
   flex-direction: column;
   background-color: $lightgrayblue;
+  color: $white;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
 }
 
 main {
@@ -22,12 +25,44 @@ main {
 }
 
 .card-container {
-  margin: auto;
-  max-width: 1200px;
+  max-width: 1280px;
   display: grid;
-  grid-template-columns: 4;
-  grid-template-rows: 2;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 2rem;
+}
+
+.card {
+  padding: 2rem;
+  border-radius: 10px;
+  font-size: 1.2em;
+}
+
+img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 2px solid $white;
+}
+
+.author-info {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.author, .verified-grad {
+  margin: 0;
+}
+
+.author {
+  font-weight: 500;
+}
+
+.big-quote {
+  font-weight: 600;
+  font-size: 2em;
+  line-height: 1.2;
 }
 
 .daniel {
@@ -56,4 +91,12 @@ main {
   grid-column: 2 / span 2;
   grid-row: 2;
   background-color: $blackblue;
+}
+
+.kira, .jeanette {
+  color: $darkgrayblue;
+}
+
+.daniel .small-quote {
+  color: $lightgray;
 }
