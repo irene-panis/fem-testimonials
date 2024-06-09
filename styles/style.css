@@ -14,6 +14,7 @@ main {
 }
 
 .card-container {
+  margin: 5rem 0;
   max-width: 1280px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -25,9 +26,10 @@ main {
   padding: 2rem;
   border-radius: 10px;
   font-size: 1.2em;
+  filter: drop-shadow(10px 10px 15px hsl(0, 0%, 81%));
 }
 
-img {
+img:not(.svg) {
   height: 50px;
   width: 50px;
   border-radius: 50%;
@@ -39,24 +41,33 @@ img {
   gap: 1rem;
   align-items: center;
 }
-
-.author, .verified-grad {
+.author-info .author, .author-info .verified-grad {
   margin: 0;
 }
-
-.author {
+.author-info .author {
   font-weight: 500;
 }
 
 .big-quote {
   font-weight: 600;
-  font-size: 2em;
+  font-size: 1.6em;
   line-height: 1.2;
 }
 
 .daniel {
   grid-column: 1/span 2;
   background-color: hsl(263, 55%, 52%);
+  position: relative;
+}
+.daniel * {
+  position: relative;
+  z-index: 1;
+}
+.daniel .svg {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  z-index: 0;
 }
 
 .jonathan {
@@ -67,13 +78,11 @@ img {
 .kira {
   grid-column: 4;
   grid-row: 1/span 2;
-  background-color: hsl(0, 0%, 100%);
 }
 
 .jeanette {
   grid-column: 1;
   grid-row: 2;
-  background-color: hsl(0, 0%, 100%);
 }
 
 .patrick {
@@ -81,12 +90,16 @@ img {
   grid-row: 2;
   background-color: hsl(219, 29%, 14%);
 }
+.patrick img {
+  border: 2px solid hsl(263, 55%, 52%);
+}
 
 .kira, .jeanette {
+  background-color: hsl(0, 0%, 100%);
   color: hsl(217, 19%, 35%);
 }
 
-.daniel .small-quote {
+.daniel .small-quote, .jonathan .small-quote, .patrick .small-quote {
   color: hsl(0, 0%, 81%);
 }
 

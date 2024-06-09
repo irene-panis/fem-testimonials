@@ -25,6 +25,7 @@ main {
 }
 
 .card-container {
+  margin: 5rem 0;
   max-width: 1280px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -36,9 +37,10 @@ main {
   padding: 2rem;
   border-radius: 10px;
   font-size: 1.2em;
+  filter: drop-shadow(10px 10px 15px $lightgray);
 }
 
-img {
+img:not(.svg) {
   height: 50px;
   width: 50px;
   border-radius: 50%;
@@ -49,25 +51,36 @@ img {
   display: flex;
   gap: 1rem;
   align-items: center;
-}
 
-.author, .verified-grad {
-  margin: 0;
-}
+  .author, .verified-grad {
+    margin: 0;
+  }
 
-.author {
-  font-weight: 500;
+  .author {
+    font-weight: 500;
+  }
 }
 
 .big-quote {
   font-weight: 600;
-  font-size: 2em;
+  font-size: 1.6em;
   line-height: 1.2;
 }
 
 .daniel {
   grid-column: 1 / span 2;
   background-color: $violet;
+  position: relative;
+  * {
+    position: relative;
+    z-index: 1;
+  }
+  .svg {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    z-index: 0;
+  }
 }
 
 .jonathan {
@@ -78,25 +91,31 @@ img {
 .kira {
   grid-column: 4;
   grid-row: 1 / span 2;
-  background-color: $white;
 }
 
 .jeanette {
   grid-column: 1;
   grid-row: 2;
-  background-color: $white;
 }
 
 .patrick {
   grid-column: 2 / span 2;
   grid-row: 2;
   background-color: $blackblue;
+
+  img {
+    border: 2px solid $violet;
+  }
 }
 
 .kira, .jeanette {
+  background-color: $white;
   color: $darkgrayblue;
 }
 
-.daniel .small-quote {
-  color: $lightgray;
+.daniel, .jonathan, .patrick {
+
+  .small-quote {
+    color: $lightgray;
+  }
 }
