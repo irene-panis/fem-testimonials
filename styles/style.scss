@@ -39,6 +39,9 @@ main {
   border-radius: 10px;
   font-size: 1.2em;
   filter: drop-shadow(10px 10px 15px $lightgray);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 img:not(.svg) {
@@ -119,6 +122,12 @@ img:not(.svg) {
   .small-quote {
     color: $lightgray;
   }
+}
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center;
+  color: $darkgrayblue; 
 }
 
 @media (max-width: 1024px) {
