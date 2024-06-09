@@ -13,6 +13,7 @@ $lightgrayblue: hsl(210, 46%, 95%);
 body {
   display: flex;
   flex-direction: column;
+  background-color: $lightgrayblue;
 }
 
 main {
@@ -31,23 +32,28 @@ main {
 
 .daniel {
   grid-column: 1 / span 2;
+  background-color: $violet;
 }
 
 .jonathan {
   grid-column: 3;
+  background-color: $darkgrayblue;
 }
 
 .kira {
   grid-column: 4;
   grid-row: 1 / span 2;
+  background-color: $white;
 }
 
 .jeanette {
   grid-column: 1;
   grid-row: 2;
+  background-color: $white;
 }
 
 .patrick {
   grid-column: 2 / span 2;
   grid-row: 2;
+  background-color: $blackblue;
 }
