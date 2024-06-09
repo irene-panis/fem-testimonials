@@ -1,3 +1,8 @@
+@mixin center-items {
+  display: flex;
+  place-content: center;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -5,12 +10,16 @@ body {
 
 main {
   flex: 1;
+  @include center-items;
 }
 
 .card-container {
+  margin: auto;
+  max-width: 1200px;
   display: grid;
   grid-template-columns: 4;
   grid-template-rows: 2;
+  gap: 2rem;
 }
 
 .daniel {

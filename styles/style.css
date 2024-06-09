@@ -5,12 +5,17 @@ body {
 
 main {
   flex: 1;
+  display: flex;
+  place-content: center;
 }
 
 .card-container {
+  margin: auto;
+  max-width: 1200px;
   display: grid;
   grid-template-columns: 4;
   grid-template-rows: 2;
+  gap: 2rem;
 }
 
 .daniel {
